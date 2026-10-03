@@ -1,0 +1,15 @@
+{
+  "name": "agahi-hoquqi",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "آگاهی حقوقی با اکبر امیری — Cloudflare Workers + D1",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check:links": "python3 scripts/check-links.py",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.45.0"
+  }
+}
