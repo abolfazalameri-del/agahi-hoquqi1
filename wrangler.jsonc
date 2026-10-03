@@ -1,0 +1,25 @@
+{
+  // آگاهی حقوقی با اکبر امیری — یک Worker که هم صفحات سایت و هم API را سرو می‌کند.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "agahi-hoquqi",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*", "/robots.txt", "/sitemap.xml"]
+  },
+  "d1_databases": [
+    {
+      // مرحلهٔ ۳ راهنما: شناسهٔ دیتابیس (Database ID) را که در داشبورد Cloudflare می‌بینید، جای متن زیر بگذارید.
+      "binding": "DB",
+      "database_name": "agahi-hoquqi-db",
+      "database_id": "PUT-YOUR-DATABASE-ID-HERE",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "build": { "command": "node scripts/set-site-url.mjs" },
+  "observability": { "enabled": true }
+  // R2 (ذخیره فایل‌های بزرگ‌تر) عمداً فعال نشده، چون ثبت کارت بانکی لازم دارد. راهنما: README-FA.md
+}
