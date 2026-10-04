@@ -14,8 +14,8 @@
     {
       // مرحلهٔ ۳ راهنما: شناسهٔ دیتابیس (Database ID) را که در داشبورد Cloudflare می‌بینید، جای متن زیر بگذارید.
       "binding": "DB",
-      ff9a25a7-0515-4af5-848a-26c440d95fb4
-      "database_id": "PUT-YOUR-DATABASE-ID-HERE",
+      "database_name": "agahi-hoquqi-db",
+      "database_id": "ff9a25a7-0515-4af5-848a-26c440d95fb4",
       "migrations_dir": "migrations"
     }
   ],
